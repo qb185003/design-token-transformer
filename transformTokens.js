@@ -3,8 +3,14 @@ const deepmerge = require("deepmerge");
 const fs = require('fs');
 const path = require('path')
 
+
+
+// Grab each JSON file in /tokens folder that have JSON format so we can map over them at the bottom
 const jsonsInDir = fs.readdirSync('./tokens').filter(file => path.extname(file) === '.json');
 
+
+// We pass this function in at the bottom for a custom config on each map over the jsonsInDir array
+// Right now we are simply using it to separate themes and make sure they're not overwritten
 function getStyleDictionaryConfig(theme) {
   return {
     "source": [`tokens/${theme}.json`],
