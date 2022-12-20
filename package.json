@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
+    "deepmerge": "^4.2.2",
     "style-dictionary": "^3"
   },
   "devDependencies": {
